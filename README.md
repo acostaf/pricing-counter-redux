@@ -1,1 +1,1 @@
-# Quick and dirty redux example
+# Quick and dirty redux example with stock prices
