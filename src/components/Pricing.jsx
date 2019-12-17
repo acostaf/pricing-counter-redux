@@ -66,6 +66,12 @@ class Pricing extends PureComponent {
                     <span style={{ color: !x.old || x.old === x.price ? 'black' : x.old > x.price ? 'green' : 'red' }}>{x.price}</span>
                   </td>
                   {/* <td>{x.old}</td> */}
+                  <td>
+                    <button style={{ color: 'blue' }}>Buy</button>
+                  </td>
+                  <td>
+                    <button style={{ color: 'red' }}>Sell</button>
+                  </td>
                 </tr>
               ))}
           </tbody>
