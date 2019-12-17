@@ -40,7 +40,7 @@ class Pricing extends PureComponent {
     this.props.addItem(newData[0]);
   };
 
-  componentDidMount(prevProps) {
+  componentDidMount() {
     setInterval(() => this.processData(), 250);
     setInterval(() => this.processData(), 850);
     setInterval(() => this.processData(), 550);
@@ -55,7 +55,6 @@ class Pricing extends PureComponent {
             <tr>
               <th align="left">Ticker</th>
               <th>Price</th>
-              {/* <th>old</th> */}
             </tr>
             {this.props.items
               .sort((a, b) => (a.code > b.code ? 1 : -1))
@@ -65,7 +64,6 @@ class Pricing extends PureComponent {
                   <td align="right">
                     <span style={{ color: !x.old || x.old === x.price ? 'black' : x.old > x.price ? 'green' : 'red' }}>{x.price}</span>
                   </td>
-                  {/* <td>{x.old}</td> */}
                   <td>
                     <button style={{ color: 'blue' }}>Buy</button>
                   </td>
